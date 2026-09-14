@@ -1,0 +1,6 @@
+{
+  "name": "QueueLess",
+  "description": "Know the queue before you go. Real-time queue status, waiting time estimation, and token tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
