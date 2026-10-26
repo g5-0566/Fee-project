@@ -96,3 +96,7 @@ On a branch's details page, QueLess can suggest another open branch from the sam
 ### Live API and demo mode
 
 The frontend first sends requests to the Express API (`VITE_API_URL`, defaulting to `http://127.0.0.1:5000/api`). A network connection failure falls back to the in-browser mock database. The **Demo / Offline Mode** banner identifies that fallback and offers a reset action. HTTP error responses remain errors and are not silently replaced by mock data. History pages can be switched between pagination and a client-side infinite-scroll view; the current history endpoints return the full result set in one request, so the infinite-scroll example progressively reveals already-loaded rows rather than fetching server pages.
+
+### GitHub Pages
+
+The GitHub Actions workflow publishes the React client at `https://g5-0566.github.io/Fee-project/`. GitHub Pages hosts static frontend files only; it does not run the Express server or MySQL database. For live data on the hosted page, configure the repository Actions variable `VITE_API_URL` to the public base URL of a separately hosted API, ending in `/api`. If no reachable API is configured, the client uses its clearly labeled offline/mock fallback. Never set the hosted API URL to `localhost`.
